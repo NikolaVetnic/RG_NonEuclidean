@@ -1,4 +1,4 @@
-package Spherical;
+package Hyperbolic;
 
 import javafx.scene.paint.Color;
 import mars.drawingx.application.DrawingApplication;
@@ -181,33 +181,6 @@ public class HyperbolicPlane implements Drawing {
 			}
 		}
 	}
-
-//	void strokeLine(View view, Color c, double grain, Vector p, Vector q) {
-//		
-//		for (int j = 0; j < (int) grain; j++)
-//			view.strokeLine(
-//					(new Point2S(R, Vector.lerp(p, q, ( j      / grain)), zz * R)).project(), 
-//					(new Point2S(R, Vector.lerp(p, q, ((j + 1) / grain)), zz * R)).project());
-//	}
-//		
-//	void strokePoly(View view, Color c, double grain, Vector[] verts) {
-//		
-//		view.setStroke(c);
-//		
-//		for (int i = 0; i < verts.length; i++)
-//			strokeLine(view, c, grain, verts[i], verts[(i + 1) % verts.length]);
-//	}
-//	
-//	void strokeRegPoly(View view, Color c, double grain, Vector C, double r, Vector R, double phi, int n) {
-//		
-//		view.setStroke(c);
-//		
-//		for (int i = 0; i < n; i++)
-//			strokeLine(
-//					view, c, grain, 
-//					C.add(Vector.polar(r, 1.0 * i / n + phi)), 
-//					C.add(Vector.polar(r, 1.0 * ((i+1)%n) / n + phi)));
-//	}
 	
 
 	@Override
