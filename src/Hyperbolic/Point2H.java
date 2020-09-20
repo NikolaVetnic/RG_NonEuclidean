@@ -36,7 +36,8 @@ public class Point2H {
 	public Vector project() {
 		
 		double[] polar = cartesianToPolar(x, y, z);
-                                                            // 1.5 - random factor, makes it better looking
+        
+		// 1.5 - random factor, makes it better looking
 		return Vector.polar(2 * polar[0] * Math.tan(1.5 * polar[2]), polar[1] / (2 * Math.PI));
 	}
 	
