@@ -84,7 +84,7 @@ public class HyperbolicPlane implements Drawing {
 	}
 	
 	
-	class RegPoly {
+	class Poly {
 		
 		static final int MAX_VERTS = 100;
 		
@@ -95,7 +95,7 @@ public class HyperbolicPlane implements Drawing {
 		int n;
 		
 		
-		public RegPoly(Vector C, Vector P, double r, int n) {
+		public Poly(Vector C, Vector P, double r, int n) {
 			
 			this.C = C;
 			this.P = P;
@@ -103,6 +103,16 @@ public class HyperbolicPlane implements Drawing {
 			this.verts = new Vector[MAX_VERTS];
 			for (int i = 0; i < n; i++)
 				verts[this.n++] = Vector.polar(r, 1.0 * i / n);
+		}
+		
+		
+		public Poly(Vector C, Vector P, Vector[] verts) {
+			
+			this.C = C;
+			this.P = P;
+			
+			this.verts = verts;
+			this.n = verts.length;
 		}
 		
 		
@@ -190,7 +200,7 @@ public class HyperbolicPlane implements Drawing {
 		
 		strokeGrid(view, Color.gray(0.5), g);
 		
-		RegPoly poly = new RegPoly(p.div(4), q.div(4), 15, n);
+		Poly poly = new Poly(p.div(4), q.div(4), 15, n);
 		poly.rotate(phi);
 		poly.stroke(view, Color.INDIANRED, g);
 	}
