@@ -10,7 +10,15 @@ import mars.drawingx.gadgets.annotations.GadgetInteger;
 import mars.drawingx.gadgets.annotations.GadgetVector;
 import mars.geometry.Vector;
 
-public class HyperbolicPlane implements Drawing {
+/*
+ *  Projecting polygons drawn on a 2-sphere onto a hyperbolic plane.
+ *  Geometry is described using Cartesian instead of polar coordina-
+ *  tes. Regular polygons (described by radius and number of vertic-
+ *  es) and irregular ones (described by center and an array of ver-
+ *  tices) are implemented. Pivotal rotation implemented. 
+ */
+
+public class Main2H implements Drawing {
 	
 	@GadgetDouble(min = 100.0, max = 500.0)
 	double r_global = 100.0;						// global radius
