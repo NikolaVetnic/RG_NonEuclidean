@@ -21,31 +21,31 @@ import mars.geometry.Vector;
 public class Main2H implements Drawing {
 	
 	@GadgetDouble(min = 100.0, max = 500.0)
-	double r_global = 100.0;						// global radius
+	double r_global = 100.0;                        // global radius
 	
 //	@GadgetDouble(min = 0.80, max = 1.0)
 	double z = 0.80;
 	
 	@GadgetVector
-	Vector C = Vector.ZERO;							// polygon center
+	Vector C = Vector.ZERO;                         // polygon center
 	
 //	@GadgetDouble(min = 10.0, max = 1000.0)
-	double r = 15.0;								// polygon radius
+	double r = 15.0;                                // polygon radius
 	
 	@GadgetInteger(min = 2, max = 100)
-	int n = 3;										// polygon number of verts
+	int n = 3;                                      // polygon number of verts
 	
 	@GadgetVector
-	Vector P = Vector.ZERO;							// rotation pivot		
+	Vector P = Vector.ZERO;                         // rotation pivot		
 	
 	@GadgetDouble(min = 0.0, max = 1.0)
-	double phi = 0.0;								// rotation angle
+	double phi = 0.0;                               // rotation angle
 	
 //	@GadgetDouble(min = 10.0, max = 1000.0)
-	double g = 100.0;								// grain (when using points for strokes)
+	double g = 100.0;                               // grain (when using points for strokes)
 	
 //	@GadgetBoolean
-	boolean gridLines = true;						// grid display (lines or points)
+	boolean gridLines = true;                       // grid display (lines or points)
 	
 
 	@Override
