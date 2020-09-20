@@ -26,9 +26,9 @@ public class Point2H {
 	private double[] cartesianToPolar(double x, double y, double z) {
 		
 		return new double[] { 
-				Math.sqrt(x * x + y * y + z * z),			// r
-				Math.atan2(y, x),							// phi
-				Math.atan2(Math.sqrt(x * x + y * y), z) 	// theta
+				Math.sqrt(x * x + y * y + z * z),           // r
+				Math.atan2(y, x),                           // phi
+				Math.atan2(Math.sqrt(x * x + y * y), z)     // theta
 		};
 	}
 
@@ -36,7 +36,7 @@ public class Point2H {
 	public Vector project() {
 		
 		double[] polar = cartesianToPolar(x, y, z);
-															// 1.5 - random factor, makes it better looking
+                                                            // 1.5 - random factor, makes it better looking
 		return Vector.polar(2 * polar[0] * Math.tan(1.5 * polar[2]), polar[1] / (2 * Math.PI));
 	}
 	
